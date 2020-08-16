@@ -16,34 +16,34 @@ CLASS("DialoguePolice", "Dialogue")
 		params [P_THISOBJECT, P_OBJECT("_unit0"), P_OBJECT("_unit1")];
 
 		pr _sentenceOfficerHello = selectRandom [
-			"What's the problem?",
-			"I'm on duty. Don't waste my time!",
-			"Move along, I am busy! What do you want?",
-			"Don't you see, I am busy over here!",
-			"Go ahead, what do you want?",
-			"Your face looks familiar. Did I arrest you a week ago?",
-			"You look like the guy I fined a week ago!"
+			"Quel est le problème?",
+			"Je suis en service. Ne me fais pas perdre pas mon temps!",
+			"Avancez, je suis occupé! Que voulez-vous?",
+			"Ne voyez-vous pas que je suis occupé!",
+			"Vas-y, que veux-tu?",
+			"Votre visage ne met pas inconnu. Ne vous aie-je pas déjà arrêté il y a une semaine?",
+			"Tu ressembles au gars à qui j'ai mie une amende il y a une semaine!"
 		];
 
 		pr _sentenceOfficerBye = selectRandom [
-			"Don't do anything funny, I'll be watching you!",
-			"Report anything unusual, citizen!",
-			"Stop wasting my time, citizen!",
-			"Allright, now go away!",
-			"I knew it was a pointless dialogue!"
+			"Ne fais rien de drôle, je vais te regarder!",
+			"Signalez tout ce qui est inhabituel, citoyen!",
+			"Arrêtez de me faire perdre mon temps, citoyen!",
+			"Très bien, pars maintenant!",
+			"Je savais que c'était une discution inutile!"
 		];
 
 		pr _sentenceThanksForReport = selectRandom [
-			"Good job, citizen. We will take measures.",
-			"Thank you. We will do something about it."
+			"Bon travail, citoyen. Nous prendrons des mesures.",
+			"Merci. Nous allons faire quelque chose à ce sujet."
 		];
 
 		pr _activities = [
-			"Some man is giving out leaflets.",
-			"Someone is making a political speech.",
-			"I think there is a political meeting over there.",
-			"I heard people talk about weapons.",
-			"Some guys are loading strange boxes into their car."
+			"Un homme distribue des tracts.",
+			"Quelqu'un fait un discours politique.",
+			"Je pense qu'il y a une réunion politique là-bas.",
+			"J'ai entendu des gens parler d'armes.",
+			"Certains types chargent d'étranges boîtes dans leur voiture."
 		];
 
 		pr _array = [
@@ -56,12 +56,12 @@ CLASS("DialoguePolice", "Dialogue")
 			// Option: ask where is the police station
 			NODE_OPTION("opt_wherePoliceStation", "Where is the police station?"),
 			NODE_SENTENCE_METHOD("", TALKER_NPC, "sentencePoliceStation"),
-			NODE_SENTENCE("", TALKER_PLAYER, "Thanks!"),
+			NODE_SENTENCE("", TALKER_PLAYER, "Merci!"),
 			NODE_JUMP("", "anythingElse"),
 
 			// Option: report activity to officer
-			NODE_OPTION("opt_reportActivity", "I want to report terrorist activity nearby!"),
-			NODE_SENTENCE("", TALKER_NPC, "What do you know?!"),
+			NODE_OPTION("opt_reportActivity", "Je veux signaler une activité terroriste à proximité!"),
+			NODE_SENTENCE("", TALKER_NPC, "Qu'est-ce que tu sais?!"),
 			NODE_OPTIONS("", ["opt_report0" ARG "opt_report1" ARG "opt_report2" ARG "opt_report3" ARG "opt_report4"]),
 
 			NODE_OPTION("opt_report0", _activities select 0), NODE_JUMP("", "reportPos"),
@@ -70,27 +70,27 @@ CLASS("DialoguePolice", "Dialogue")
 			NODE_OPTION("opt_report3", _activities select 3), NODE_JUMP("", "reportPos"),
 			NODE_OPTION("opt_report4", _activities select 4), NODE_JUMP("", "reportPos"),
 
-			NODE_SENTENCE("reportPos", TALKER_NPC, "Where did you see it?"),
+			NODE_SENTENCE("reportPos", TALKER_NPC, "Où l'as-tu vu?"),
 			NODE_OPTIONS("", ["opt_tellBearing" ARG "opt_followMe"]),
 
 				NODE_CALL_METHOD("opt_tellBearing", "playPlayerGesture", []), // Player points with his arm somewhere
-				NODE_OPTION("", "Where I am looking at. A few hundred of meters this way."),
+				NODE_OPTION("", "Là où je regarde. A quelques centaines de mètres par ici."),
 				NODE_CALL_METHOD("", "reportActivity", []),
 				NODE_SENTENCE("", TALKER_NPC, _sentenceThanksForReport),
 				NODE_END(""),
 
-				NODE_OPTION("opt_followMe", "Follow me, I will show you!"),
-				NODE_SENTENCE("", TALKER_NPC, "This sounds strange. Let's go, show me the way!"),			
+				NODE_OPTION("opt_followMe", "Suivez-moi, je vais vous montrer!"),
+				NODE_SENTENCE("", TALKER_NPC, "Cela semble étrange. Allons-y, montrez-moi le chemin!"),			
 				NODE_CALL_METHOD("", "follow", []),
 				NODE_END(""),
 
 			// Option: leave
-			NODE_OPTION("opt_bye", "Bye! I must leave now."),
+			NODE_OPTION("opt_bye", "Bye! Je dois partir maintenant."),
 			NODE_SENTENCE("", TALKER_NPC, _sentenceOfficerBye),
 			NODE_END(""),
 
 			// Generic 'Anything else?' reply after the end of some option branch
-			NODE_SENTENCE("anythingElse", TALKER_NPC, "Anything else?"),
+			NODE_SENTENCE("anythingElse", TALKER_NPC, "Rien d'autre?"),
 			NODE_JUMP("", "options") // Go back to options
 		];
 

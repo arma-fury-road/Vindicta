@@ -290,9 +290,7 @@ CLASS("ActionUnitMove", "ActionUnit")
 						} else {
 							[_defaultPos, 0, 100, 0, 0, 100, 0, [], [_defaultPos, _defaultPos]] call BIS_fnc_findSafePos;
 						};
-						if (!(surfaceIsWater _newPos)) then {
-							_hVeh setPos _newPos;
-						};
+						_hVeh setPos _newPos;
 						T_SETV("stuckTimer", GAME_TIME + TIMER_STUCK_THRESHOLD * 3);
 					};
 					default {

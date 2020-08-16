@@ -130,5 +130,3 @@
 // Means that we are in the editor
 //#define EDITOR_PREVIEW
 
-// Uncomment to debug strategic nav grid, might be useful for porting to other maps
-//#define DEBUG_STRATEGIC_NAV_GRID

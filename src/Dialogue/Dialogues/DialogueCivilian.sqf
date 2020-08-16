@@ -28,79 +28,79 @@ CLASS("DialogueCivilian", "Dialogue")
 		params [P_THISOBJECT, P_OBJECT("_unit0"), P_OBJECT("_unit1")];
 		
 		pr _phrasesPlayerAskMilitaryLocations = [
-			"Do you know any military outposts in the area?",
-			"Do you know of any military places around here?",
-			"Hey, are there any ... you know ... military places near here?",
-			"Have you seen any military activity around here?",
-			"Do you know any military locations around here?"
+			"Connaissez-vous des avant-postes militaires dans la région?",
+			"Connaissez-vous des lieux militaires par ici?",
+			"Hé, y a-t-il des... tu sais... des endroits militaires près d'ici?",
+			"Avez-vous vu des activités militaires par ici?",
+			"Connaissez-vous des emplacements militaires ici?"
 		];
 
 		pr _phrasesIncite = [
-			"Damn police, they keep arresting innocent people!",
-			"Those militarist pigs will pay for their crimes!",
-			"Yesterday they have arrested my friends' family because of 'terrorist activity' as the police say!",
-			"The police took my brother yesterday, you might be next one!",
-			"Have you heard about those illegal detention camps? I know a guy who returned from one, horrible place!",
-			"We must stay united, or next time police will take one of us for some fake reason!",
-			"Police tossed drugs to one of my friends and arrested him! Assholes!",
-			"We should seek justice for all the war crimes the military are doing here!",
-			"The military are so corrupt! There is no other solution to this any more!"
+			"Putain de police, ils n'arrêtent pas d'arrêter des innocents!",
+			"Ces porcs militaristes paieront pour leurs crimes!",
+			"Hier, ils ont arrêté la famille de mes amis à cause d'une soit disant activité terroriste... Mais ça, c'est la police qui le dit!",
+			"La police a emmené mon frère hier, tu es peut-être le prochain!",
+			"Avez-vous entendu parler de ces camps de détention illégaux? Je connais un gars qui est revenu d'un endroit horrible!",
+			"Nous devons rester unis, car la prochaine fois que la police prendra l'un de nous cela sera peut-être pour une fausse raison!",
+			"La police a jeté de la drogue à l'un de mes amis et l'a arrêté! Des connards!",
+			"Nous devons demander justice pour tous les crimes de guerre commis par l'armée ici!",
+			"Les militaires sont tellement corrompus! Il n'y a plus d'autre solution que de prendre les armes!"
 		];
 
 		pr _phrasesCivilianInciteResponse = [
-			"Damn that's horrible!",  "I am shocked to hear this!",
-			"You are so right!", "That's horrible!", "We should put an end to this!",
-			"Yes! The truth must be exposed!", "Oh really, they don't tell that on TV!",
-			"Damn I've never heard of it on the local radio!",
-			// Written by Jasperdoit:
-			"You're straight up spitting facts there mate! It's about time somebody puts a stop to that, and I for one am up for it!",
-			"You're right, they really are corrupt. Lets get to work on some change around here!",
-			"They definitely have some stick up their ass, let's show them who the real boss is!",
-			"Well there is one solution, and it involves guns and liberation. I'm up for it if you ask me!",
-			"I might know a way to fix their attitude! Its about time I get involved in this!",
-			"The less control they have, the better! Count me in!"
+			"Merde, c'est horrible!", "Je suis choqué d'entendre ça!",
+			"Vous avez tellement raison!", "C'est horrible!", "Nous devrions mettre fin à ça!",
+			"Oui! La vérité doit être révélée!", "Oh vraiment, ils ne disent pas ça à la télé!",
+			"Merde, je n'en ai jamais entendu parler de ça à la radio locale!",
+			// Écrit par Jasperdoit:
+			"Vous êtes carrément en train de cracher les faits, mon pote! Il est temps que quelqu'un y mette un terme, et je suis partant pour ça!",
+			"Vous avez raison, ils sont vraiment corrompus. Mettons-nous au travail sur un vrai changement!",
+			"Ils ont vraiment du bâton dans le cul, montrons-leur qui sont les vrais patrons!",
+			"Eh bien, il y a une solution, et cela implique les armes et la libération. Je suis partante si vous me le demandez!",
+			"Je connais peut-être un moyen de corriger leur attitude! Il est temps que je m'implique!",
+			"Moins ils ont le contrôle, mieux c'est! Comptez sur moi!"
 		];
 
 		pr _phrasesScare = [
-			"Get out of here, quick!",
-			"Something bad is going to happen here. Better move away!",
-			"It's not safe here, run away!",
-			"This place is not safe, you better get away!",
-			"Sir you better get out of here, quick!",
-			"Move out of here! This place is not safe!"
+			"Sortez d'ici, vite!",
+			"Quelque chose de grave va se passer ici. Mieux vaut s'éloigner!",
+			"Ce n'est pas sûr ici, fuyez!",
+			"Cet endroit n'est pas sûr, tu ferais mieux de t'enfuir!",
+			"Monsieur, vous feriez mieux de sortir d'ici, vite!",
+			"Sortez d'ici! Cet endroit n'est pas sûr!"
 		];
 
 		pr _phrasesIntel = [
-			"Do you know if there will be any military maneuvers nearby?",
-			"Have you got any idea if the military are planning something?",
-			"Any idea if the army is planning something?"
+			"Savez-vous s'il y aura des manœuvres militaires à proximité?",
+			"Avez-vous une idée si les militaires prévoient quelque chose?",
+			"Une idée si l'armée prépare quelque chose?"
 		];
 
 		pr _phrasesAskHelp = [
-			"The resistence needs your help! Do you have any building supplies?",
-			"Listen, the resistence needs some building supplies, do you have any?"
+			"La résistance a besoin de votre aide! Avez-vous des matériaux de construction?",
+			"Écoutez, la résistance a besoin de matériaux de construction, en avez-vous?"
 		];
 
 		pr _phrasesAgreeHelp = [
-			"Here, take these construction supplies, that's all I have.",
-			"Take these construction supplies, that's all I can help you with."
+			"Tenez, prenez ces matériaux de construction, c'est tout ce que j'ai.",
+			"Prenez ces matériaux de construction, c'est tout ce que je peux faire pour vous."
 		];
 
 		pr _phrasesDontSupportResistance = [
-			"I can't help you with it.",
-			"Sorry I can't help you.",
-			"There is nothing I can help you with."
+			"Je ne peux pas vous aider.",
+			"Désolé, je ne peux pas vous aider.",
+			"Je ne peux rien faire pour vous."
 		];
 
 		pr _phrasesDontKnowIntel = [
-			"I don't know anything like that.",
-			"I am not aware of such information.",
-			"Sorry I don't know anything of this kind."
+			"Je ne sais rien de tel.",
+			"Je n'ai pas connaissance de telles informations.",
+			"Désolé, je ne sais rien de ce genre."
 		];
 
 		pr _array = [
 			//NODE_SENTENCE("", TALKER_PLAYER, g_phrasesPlayerStartDialogue),
-			NODE_SENTENCE("", TALKER_NPC, ["Sure!" ARG "Yes?" ARG "How can I help you?"]),
+			NODE_SENTENCE("", TALKER_NPC, ["Sûr!" ARG "Oui?" ARG "Comment puis-je vous aider?"]),
 			
 			// Options: 
 			NODE_OPTIONS("node_options", ["opt_locations" ARG "opt_intel" ARG "opt_incite" ARG "opt_askContribute" ARG "opt_scare" ARG "opt_time" ARG "opt_bye"]),
@@ -124,10 +124,10 @@ CLASS("DialogueCivilian", "Dialogue")
 			NODE_JUMP_IF("", "node_alreadyIncited", "isIncited", []),	// If already incited
 			NODE_SENTENCE("", TALKER_NPC, _phrasesCivilianInciteResponse),
 			NODE_CALL_METHOD("", "inciteCivilian", []),
-			NODE_SENTENCE("", TALKER_PLAYER, "Tell it to others!"),
+			NODE_SENTENCE("", TALKER_PLAYER, "Dites-le aux autres!"),
 			NODE_JUMP("", "node_options"),
 
-			NODE_SENTENCE("node_alreadyIncited", TALKER_NPC, "I know! It's dangerous to discuss this."),
+			NODE_SENTENCE("node_alreadyIncited", TALKER_NPC, "Je sais! C'est dangereux d'en discuter."),
 			NODE_JUMP("", "node_options"),
 
 			// Option: ask for contribution
@@ -141,7 +141,7 @@ CLASS("DialogueCivilian", "Dialogue")
 			NODE_SENTENCE("", TALKER_NPC, selectRandom _phrasesAgreeHelp),
 			NODE_JUMP("", "node_anythingElse"),
 
-			NODE_SENTENCE("node_alreadyContributed", TALKER_NPC, "Sorry I gave all I could already!"),
+			NODE_SENTENCE("node_alreadyContributed", TALKER_NPC, "Désolé j'ai déjà donné tout ce que je pouvais!"),
 			NODE_JUMP("", "node_anythingElse"),
 
 			// Option: scare civilian
@@ -150,18 +150,18 @@ CLASS("DialogueCivilian", "Dialogue")
 			NODE_END(""),
 
 			// Option: ask about time
-			NODE_OPTION("opt_time", "What time is it?"),
+			NODE_OPTION("opt_time", "Quelle heure est-il?"),
 			NODE_SENTENCE_METHOD("", TALKER_NPC, "sentenceTime"),
-			NODE_SENTENCE("", TALKER_PLAYER, "Thanks!"),
+			NODE_SENTENCE("", TALKER_PLAYER, "Merci!"),
 			NODE_JUMP("", "node_anythingElse"),
 
 			// Option: leave
-			NODE_OPTION("opt_bye", "Bye! I must leave now."),
-			NODE_SENTENCE("", TALKER_NPC, ["Bye!" ARG "Good bye!" ARG "See you!"]),
+			NODE_OPTION("opt_bye", "A plus! Je dois partir maintenant."),
+			NODE_SENTENCE("", TALKER_NPC, ["A plus!" ARG "Au revoir!" ARG "A bientôt!"]),
 			NODE_END(""),
 
 			// Genertic 'Anything else?' reply after the end of some option branch
-			NODE_SENTENCE("node_anythingElse", TALKER_NPC, "Anything else?"),
+			NODE_SENTENCE("node_anythingElse", TALKER_NPC, "Rien d'autre?"),
 			NODE_JUMP("", "node_options") // Go back to options
 		];
 
@@ -205,13 +205,13 @@ CLASS("DialogueCivilian", "Dialogue")
 		OOP_INFO_1("  Locations known by civilian: %1", _locsCivKnows);
 
 		_a = [];
-		_a pushBack NODE_SENTENCE("subroutineTellLocations", TALKER_NPC, ["Let me think..." ARG "Give me a second..." ARG "One moment. Let me think..."]);
+		_a pushBack NODE_SENTENCE("subroutineTellLocations", TALKER_NPC, ["Laisse-moi réfléchir ..." ARG "Donnez-moi une seconde ..." ARG "Un instant. Laissez-moi réfléchir ..."]);
 		
 		if (count _locsCivKnows == 0) then {
-			pr _str = "No, there aren't any within kilometers of this place.";
+			pr _str = "Non, il n'y en a pas à des kilomètres à la ronde.";
 			_a pushBack NODE_SENTENCE("", TALKER_NPC, _str);
 		} else {
-			pr _str = "Yes, I know of a few places like that ...";
+			pr _str = "Oui, je connais quelques endroits comme ça ...";
 			_a pushBack NODE_SENTENCE("", TALKER_NPC, _str);
 
 			{ // forEach _locsCivKnows;
@@ -227,23 +227,23 @@ CLASS("DialogueCivilian", "Dialogue")
 				pr _typeString = CALLSM1("Location", "getTypeString", _type);
 				pr _bearingString = _bearings select _bearingID;
 				pr _distanceString = if(_distance < 400) then {
-					selectRandom ["quite close.", "within 400 meters.", "right over here.", "five-minute walk from here."]
+					selectRandom ["tout près.", "à moins de 400 mètres.", "juste par ici.", "à cinq minutes à pied d'ici."]
 				} else {
 					if (_distance < 1000) then {
-						selectRandom ["not too far away from here.", "within a kilometer.", "10 minute walk from here.", "not far from here at all."];
+						selectRandom ["pas trop loin d'ici.", "à moins d'un kilomètre.", "10 minutes à pied d'ici.", "pas loin d'ici du tout."];
 					} else {
-						selectRandom ["very far away.", "pretty far away.", "more than a kilometer from here.", "quite a bit away from here."];
+						selectRandom ["très loin.", "assez loin.", "plus d'un kilomètre d'ici.", "assez loin d'ici."];
 					};
 				};
-				pr _intro = selectRandom [	"There is a ",
-											"I know about a",
-											"I think there is a",
-											"Some time ago I saw a",
-											"A friend told me about a",
-											"People are nervous about a",
-											"People are talking about a",
-											"A long time ago there was a",
-											"Not sure about the coordinates, there is a"];
+				pr _intro = selectRandom [	"Il y a un",
+											"Je sais pour un",
+											"Je pense qu'il y a un",
+											"Il y a quelque temps, j'en ai vu un",
+											"Un ami m'a parlé d'un",
+											"Les gens sont nerveux à propos d'un",
+											"Les gens parlent d'un",
+											"Il y a longtemps, il y avait un",
+											"Pas sûr des coordonnées, il y a un"];
 
 				pr _posString = if (_type == LOCATION_TYPE_POLICE_STATION) then {
 					pr _locCities = CALLSM1("Location", "getLocationsAtPos", _locPos) select {
@@ -271,9 +271,9 @@ CLASS("DialogueCivilian", "Dialogue")
 
 			// Civilian: I must go
 			_strMustGo = selectRandom [
-				"That's all I can tell you.",
-				"I don't know anything else.",
-				"That's all I know."
+				"C'est tout ce que je peux vous dire.",
+				"Je ne sais rien d'autre.",
+				"C'est tout ce que je sais."
 			];
 			_a pushBack NODE_SENTENCE("", TALKER_NPC, _strMustGo);
 		};
@@ -293,15 +293,15 @@ CLASS("DialogueCivilian", "Dialogue")
 		OOP_INFO_2("generateIntelNodes: location: %1 %2", _loc, CALLM0(_loc, "getName"));
 
 		_a = [];
-		_a pushBack NODE_SENTENCE("subroutineTellIntel", TALKER_NPC, ["Let me think..." ARG "Give me a second..." ARG "One moment. Let me think..."]);
+		_a pushBack NODE_SENTENCE("subroutineTellIntel", TALKER_NPC, ["Laisse-moi réfléchir..." ARG "Donnez-moi une seconde..." ARG "Un instant. Laissez-moi réfléchir..."]);
 
 		pr _phrasesIntelSource = [
-			"A friend told me about a",
-			"A friend said he heard from somebody about a",
-			"I heard some guys talk about a",
-			"I think I heard policemen talk about a",
-			"My friend told me about a",
-			"Some time ago I could hear some soldiers talk about a"
+			"Un ami m'a parlé d'un",
+			"Un ami a dit qu'il avait entendu quelqu'un parler d'un",
+			"J'ai entendu des gars parler d'un",
+			"Je pense avoir entendu des policiers parler d'un",
+			"Mon ami m'a parlé d'un",
+			"Il y a quelque temps, j'ai entendu des soldats parler d'un"
 		];
 
 		pr _intelArray = CALLM0(_loc, "getIntel");
@@ -326,12 +326,14 @@ CLASS("DialogueCivilian", "Dialogue")
 
 			// Civilian: I must go
 			_strMustGo = selectRandom [
-				"What are you going to do with this information anyway?",
-				"By the way, why do you are you asking this?",
-				"Just don't tell me why you are asking, all right?",
-				"I don't want to know what you are going to do with this information!",
-				"Just don't tell them I told you this!",
-				"I have a bad feeling about this."
+				"Qu'est-ce que tu vas faire de cette information de toute façon?",
+				"Au fait, pourquoi demandez-vous cela?",
+				"Ne me dis pas pourquoi tu demandes, d'accord?",
+				"Je ne veux pas savoir ce que vous allez faire de ces informations!",
+				"Ne leur dis pas que je t'ai dit ça!",
+				"J'ai un mauvais pressentiment à propos de ça."
+
+
 			];
 			_a pushBack NODE_SENTENCE("", TALKER_NPC, _strMustGo);
 		} else {
@@ -393,9 +395,9 @@ CLASS("DialogueCivilian", "Dialogue")
 		if (random 10 < 2) then {
 			selectRandom
 				[
-					"Are you serious? You have a watch on your hand!",
-					"Don't you have a phone?",
-					"Don't you have a watch yourself?"
+					"Êtes-vous sérieux? Vous avez une montre à la main!",
+					"Tu n'as pas de téléphone?",
+					"Tu n'as pas de montre toi-même?"
 				];
 		} else {
 			format ["It is %1", [_time, "HH:MM"] call BIS_fnc_timeToString];
